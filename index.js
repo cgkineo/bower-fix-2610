@@ -12,7 +12,7 @@ Mod.prototype.require = function () {
     const cmd = arguments[0]
     const args = arguments[1]
     // Check that arguments begin ['git', ['ls-remote', ...]]
-    if (typeof cmd !== 'string' || !/git/.test(cmd) || !Array.isArray(args) || args[0] !== 'ls-remote') return p.apply(this, arguments)
+    if (typeof cmd !== 'string' || cmd !== 'git' || !Array.isArray(args) || args[0] !== 'ls-remote') return p.apply(this, arguments)
     arguments[1] = args.map(function (arg) {
       if (typeof arg !== 'string') return arg
       // Replace git://github.com with https://github.com
