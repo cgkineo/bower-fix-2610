@@ -1,0 +1,6 @@
+{
+  "name": "bower-fix-2610",
+  "version": "1.0.0",
+  "description": "Fix for bower issue 2610, github no longer supports git:// protocol",
+  "main": "index.js"
+}
